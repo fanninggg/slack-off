@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -19,10 +16,10 @@ import selectedChannelReducer from './reducers/selected_channel_reducer';
 const identityReducer = (state = null) => state;
 
 const initialState = {
-  channels: ['general', 'london', 'batch 123'],
-  currentUser: prompt("Waht is your username?"),
+  channels: ['voyagr', 'general', 'london'],
+  currentUser: prompt("What is your username?"),
   messages: [],
-  selectedChannel: '123'
+  selectedChannel: 'voyagr'
 };
 
 const reducers = combineReducers({

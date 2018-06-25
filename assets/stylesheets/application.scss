@@ -15,9 +15,9 @@ h3 {
   height: 100vh;
   display: flex;
   justify-content: space-around;
-  > img {
+}
+a {
     margin-top: 20px;
-  }
 }
 .channel-container {
   display: flex;
@@ -40,7 +40,11 @@ h3 {
 }
 .channel-messages {
   overflow: scroll;
+  padding-top: 10px;
   padding-bottom: 40px;
+}
+.message-container {
+  padding: 5px 10px;
 }
 .message-user-and-time {
   display: flex;
