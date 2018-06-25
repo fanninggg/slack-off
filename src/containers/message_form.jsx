@@ -25,7 +25,7 @@ class MessageForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="flex-form" onSubmit={this.handleSubmit}>
         <input
           ref={(input) => { this.messageBox = input; }}
           type="text"
@@ -35,7 +35,7 @@ class MessageForm extends Component {
           onChange={this.handleChange}
           value={this.state.value}
         />
-        <button type="submit">Send</button>
+        <button className="send-button btn-success" type="submit">Send</button>
       </form>
     );
   }
@@ -53,58 +53,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MessageForm);
-
-// import React, { Component } from 'react';
-// import { bindActionCreators } from 'redux';
-// import { connect } from 'react-redux';
-// import { createMessage } from '../actions/index';
-
-// class MessageForm extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = { value: '' };
-//   }
-
-//   componentDidMount() {
-//     this.messageBox.focus();
-//   }
-
-//   handleChange = (event) => {
-//     this.setState({ value: event.target.value });
-//   }
-
-//   handleSubmit = (event) => {
-//     event.preventDefault();
-//     this.props.createMessage(this.props.selectedChannel, this.props.currentUser, this.state.value);
-//     this.setState({ value: '' }); // Reset message input
-//   }
-
-//   render() {
-//     return (
-//       <form onSubmit={this.handleSubmit} className="channel-editor">
-//         <input
-//           ref={(input) => { this.messageBox = input; }}
-//           type="text"
-//           className="form-control"
-//           autoComplete="off"
-//           value={this.state.value}
-//           onChange={this.handleChange}
-//         />
-//         <button type="submit">Send</button>
-//       </form>
-//     );
-//   }
-// }
-
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators({ createMessage }, dispatch);
-// }
-
-// function mapStateToProps(state) {
-//   return {
-//     currentUser: state.currentUser,
-//     selectedChannel: state.selectedChannel
-//   };
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(MessageForm);
