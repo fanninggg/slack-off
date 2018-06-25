@@ -8,7 +8,9 @@ const App = () => {
     <div className="app">
       <div className="channel-container">
         <div className="sidebar">
-          <img src="https://avatars1.githubusercontent.com/u/33252472?s=400&v=4" alt="Chief Slacker" style={{ height: 50 + "px", width: 50 + "px", borderRadius: 50 + "%" }} />
+          <a href="http://www.benfanning.co.uk">
+            <img src="https://avatars1.githubusercontent.com/u/33252472?s=400&v=4" alt="Chief Slacker" style={{ height: 50 + "px", width: 50 + "px", borderRadius: 50 + "%" }} />
+          </a>
         </div>
         <ChannelList />
         <MessageList />
