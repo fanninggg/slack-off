@@ -1,7 +1,46 @@
 body {
   font-family: Helvetica;
 }
+h3 {
+  font-weight: bold;
+  font-size: 16px;
+}
 .app {
-  margin-top: 20px;
   margin-bottom: 20px;
+  height: 100vh;
+}
+.sidebar {
+  background-color: #DBDBDB;
+  width: 5vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  > img {
+    margin-top: 20px;
+  }
+}
+.channel-container {
+  display: flex;
+}
+.channel-column {
+  padding: 20px;
+  width: 25vw;
+  height: 100vh;
+  background-color: #F4F4F4;
+}
+.channel-content {
+  padding: 20px;
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.channel-messages {
+  overflow: scroll;
+}
+.message-user-and-time {
+  display: flex;
+}
+.message-user {
+  margin-right: 5px;
 }
